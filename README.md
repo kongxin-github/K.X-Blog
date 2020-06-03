@@ -5,4 +5,4 @@
 
 **实现功能：**
 
-![功能模块图](C:\Users\K.X\Desktop\网课资源\软件项目开发综合实验\功能模块图.png)
+![功能模块图](https://github.com/15138299517/K.X-Blog/blob/master/fbd.png)
