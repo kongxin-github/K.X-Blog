@@ -1,0 +1,23 @@
+#端口，项目上下文根
+server:
+  port: 8080
+  servlet:
+    context-path: /blog
+    
+#配置mybatis
+mybatis:
+  #配置xml映射路径
+  mapper-locations: classpath:mapper/*.xml
+   #配置实体类的别名
+  type-aliases-package: com.kx.pojo
+  configuration:
+    #开启驼峰命名法
+    map-underscore-to-camel-case: true
+    
+
+#配置mysql连接
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456

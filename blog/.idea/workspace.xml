@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d2e6a77-321e-49f5-8a18-28c9ab23c645" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\develop\maven_repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="F:\develop\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectId" id="1cM9RiVCRuDLS18ej3xmpKLnSD5" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kx" />
+      <recent name="com.kx.service" />
+      <recent name="com.kx.controller" />
+      <recent name="com.kx.mapper" />
+      <recent name="com.kx.pojo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\IDEA_zuoye\KX\blog\src\main\resources\mapper" />
+      <recent name="F:\develop\IDEA_zuoye\KX\blog\src\main\resources\static\upload" />
+      <recent name="F:\develop\IDEA_zuoye\KX\blog\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Application">
+    <configuration name="NoticeTest.testDeleteNoticeById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kx" />
+      <option name="MAIN_CLASS_NAME" value="com.kx.NoticeTest" />
+      <option name="METHOD_NAME" value="testDeleteNoticeById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoticeTest.testInsertNotice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kx" />
+      <option name="MAIN_CLASS_NAME" value="com.kx.NoticeTest" />
+      <option name="METHOD_NAME" value="testInsertNotice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoticeTest.testSelectNoticeById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kx" />
+      <option name="MAIN_CLASS_NAME" value="com.kx.NoticeTest" />
+      <option name="METHOD_NAME" value="testSelectNoticeById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NoticeTest.testUpdateNotice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.kx" />
+      <option name="MAIN_CLASS_NAME" value="com.kx.NoticeTest" />
+      <option name="METHOD_NAME" value="testUpdateNotice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kx.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Default_(Template)_Project" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="javadebug" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="JUnit.NoticeTest.testDeleteNoticeById" />
+        <item itemvalue="JUnit.NoticeTest.testInsertNotice" />
+        <item itemvalue="JUnit.NoticeTest.testSelectNoticeById" />
+        <item itemvalue="JUnit.NoticeTest.testUpdateNotice" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d2e6a77-321e-49f5-8a18-28c9ab23c645" name="Default Changelist" comment="" />
+      <created>1590327588608</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590327588608</updated>
+      <workItem from="1590327592588" duration="1724000" />
+      <workItem from="1590368867319" duration="5174000" />
+      <workItem from="1590392664012" duration="16213000" />
+      <workItem from="1590460907105" duration="9273000" />
+      <workItem from="1590544028883" duration="10322000" />
+      <workItem from="1590625380674" duration="4909000" />
+      <workItem from="1590735459103" duration="7899000" />
+      <workItem from="1590801239462" duration="11860000" />
+      <workItem from="1590835095723" duration="1269000" />
+      <workItem from="1590975873288" duration="17111000" />
+      <workItem from="1591058735673" duration="12492000" />
+      <workItem from="1591144856946" duration="284000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="87" key="#HTTP_Proxy" timestamp="1590328161339">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="87" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1590328161339" />
+    <state x="361" y="71" key="#Notifications" timestamp="1590369210962">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1590369210962" />
+    <state x="361" y="71" key="#Project_Structure" timestamp="1590328605725">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1590328605725" />
+    <state x="520" y="113" key="#com.intellij.ide.util.MemberChooser" timestamp="1590803368578">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590803368578" />
+    <state x="389" y="90" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1590328463369">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="389" y="90" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.824@0.0.1536.824" timestamp="1590328463369" />
+    <state width="1493" height="107" key="GridCell.Tab.0.bottom" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.0.center" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.0.left" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.0.right" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.1.bottom" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.1.center" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.1.left" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state width="1493" height="107" key="GridCell.Tab.1.right" timestamp="1591108985535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="107" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591108985535" />
+    <state x="270" y="54" key="SettingsEditor" timestamp="1590369318608">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590369318608" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590409239941">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590409239941" />
+  </component>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kx.mapper.NoticeMapper">
+
+    <!-- 查询所有公告列表 按发布时间排序-->
+    <select id="selectNotice"  resultType="Notice">
+        select id,title,created from notice order by id desc
+    </select>
+
+    <!--根据id查询公告详情-->
+    <select id="selectNoticeById"  resultType="Notice">
+        select id,title,content,created from notice where id=#{id}
+    </select>
+
+    <!-- 发布一个公告 -->
+    <insert id="insertNotice" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into notice (title,content) values(#{title},#{content})
+    </insert>
+
+    <!--编辑公告-->
+    <update id="updateNotice" parameterType="Notice">
+        update notice
+        <set>
+            <if test="title != null and title != '' ">
+                title=#{title},
+            </if>
+            <if test="content != null and content != '' ">
+                content=#{content},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <!-- 删除公告 根据公告id -->
+    <delete id="deleteNoticeById" parameterType="Integer" >
+        delete  from notice where id=#{id}
+    </delete>
+</mapper>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kx.mapper.ArticleMapper">
+
+    <!--查询所有文章列表，按时间排序-->
+    <select id="selectArticleByDate" resultType="Article">
+        select id,title,created,hits,zan,comments from article order by id desc
+   </select>
+
+    <!--查询所有文章列表，按热度排序前5篇文章-->
+    <select id="selectArticleByZan" resultType="Article">
+        select id,title from article order by hits desc,zan desc,comments desc limit 5
+    </select>
+
+    <!--查询所有评论及对应访客和文章标题-->
+    <select id="selectTitlesWithComment" resultMap="titlesWithComment">
+        select a.id,a.title,c_id,c_content,c_created,u_nickname,u_photo
+        from article a,
+        (select c.id c_id,c.articleid c_articleid,c.content c_content,c.created c_created,u.nickname u_nickname,u.photo u_photo
+        from user u,comment c
+        where c.userid=u.id) as b
+        where a.id=c_articleid
+    </select>
+    <resultMap id="titlesWithComment" type="Article">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <collection property="commentList" ofType="Comment">
+            <id property="id" column="c_id"/>
+            <result property="content" column="c_content"/>
+            <result property="created" column="c_created"/>
+            <association property="user" javaType="User">
+                <result property="nickname" column="u_nickname"/>
+                <result property="photo" column="u_photo"/>
+            </association>
+        </collection>
+    </resultMap>
+
+    <!--根据id查询文章详情，包括所有评论-->
+    <select id="selectArticleByID" resultMap="articleWithComment">
+        select a.*,c_id,c_content,c_created,u_nickname,u_photo
+        from article a left join
+        (select c.id c_id,c.articleid c_articleid,c.content c_content,c.created c_created,u.nickname u_nickname,u.photo u_photo
+        from user u,comment c
+        where c.userid=u.id) as b
+        on a.id=c_articleid where a.id=#{id} order by c_id desc;
+    </select>
+    <resultMap id="articleWithComment" type="Article">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="created" column="created"/>
+        <result property="hits" column="hits"/>
+        <result property="zan" column="zan"/>
+        <result property="comments" column="comments"/>
+        <collection property="commentList" ofType="Comment">
+            <id property="id" column="c_id"/>
+            <result property="content" column="c_content"/>
+            <result property="created" column="c_created"/>
+            <association property="user" javaType="User">
+                <result property="nickname" column="u_nickname"/>
+                <result property="photo" column="u_photo"/>
+            </association>
+        </collection>
+    </resultMap>
+
+    <!--根据id查询文章详情，不包括评论（修改文章使用）-->
+    <select id="selectArticle" resultType="Article">
+        select * from article where id = #{id}
+    </select>
+    <!--发布文章-->
+    <insert id="insertArticle" parameterType="Article" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into article (title,content,hits,zan,comments) values (#{title},#{content},#{hits},#{zan},#{comments})
+    </insert>
+
+    <!--修改文章-->
+    <update id="updateArticle" parameterType="Article">
+        update article
+        <set>
+            <if test="title != null and title != '' ">
+                title=#{title},
+            </if>
+            <if test="content != null and content != '' ">
+                content=#{content},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <!--根据id删除文章-->
+    <delete id="deleteArticle">
+        delete  from article where id=#{id}
+    </delete>
+
+    <!--根据id增加点击量-->
+    <update id="updateArticleHits">
+        update article set hits=hits+1 where id=#{id}
+    </update>
+
+    <!--根据id增加赞数-->
+    <update id="updateArticleZan">
+        update article set zan=zan+1 where id=#{id}
+    </update>
+
+    <!--根据id增加评论数-->
+    <update id="updateArticleAddComments">
+        update article set comments=comments+1 where id=#{id}
+    </update>
+
+    <!--根据id减少评论数-->
+    <update id="updateArticleSubComments">
+        update article set comments=comments-1 where id=#{id}
+    </update>
+</mapper>

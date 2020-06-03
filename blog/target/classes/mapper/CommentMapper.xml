@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kx.mapper.CommentMapper">
+
+    <!--发布评论-->
+    <insert id="insertComment" parameterType="Comment">
+        insert into comment (articleid,userid,content) values (#{articleid},#{userid},#{content})
+    </insert>
+
+    <!--根据id删除评论-->
+    <delete id="deleteCommentById">
+        delete from comment where id=#{id}
+    </delete>
+
+    <!--根据articleid删除该文章所有评论-->
+    <delete id="deleteCommentByArticleId">
+        delete from comment where articleid=#{articleid}
+    </delete>
+</mapper>
