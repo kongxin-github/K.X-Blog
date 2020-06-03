@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>K.X的博客</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js"></script>
+    
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"> </script>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css"> -->
+
+    <script src="js/vue-html5-editor.js"></script>
+    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+   <style>
+        #t1{
+            border-radius: 5px 5px 5px 5px;
+            background-color:white;
+            padding: 10px
+        }
+        #t2{
+            background-color:white;
+            padding: 20px 80px 250px  80px
+        }
+        #t3{
+            border-radius: 50px 50px 50px 50px;
+            background-color:white;
+            padding: 20px 80px 150px  80px
+        }
+        #r1{
+            border-radius: 5px 5px 5px 5px;
+        }
+        .r{
+            border-radius: 10px 10px 10px 10px;
+        }
+   </style>
+   
+
+</head>
+
+<body style="background:#000000 url( ./img/背景.gif) repeat right top;  background-attachment:fixed; word-break:break-all;">
+
+    <div id="app">
+        <!-- 路由匹配到的组件将渲染在这里 -->
+        <router-view></router-view>
+    </div>
+
+    <!--引入组建-->
+    <script src="components/add.js"></script>
+    <script src="components/detail.js"></script>
+    <script src="components/menu.js"></script>
+    <script src="components/admin.js"></script>
+    <script src="components/edit.js"></script>
+    <script src="components/foot.js"></script>
+    <script src="components/login.js"></script>
+    <script src="components/modify.js"></script>
+    <script src="components/modifypwd.js"></script>
+    <script src="components/noticeAdd.js"></script>
+    <script src="components/noticeDetail.js"></script>
+    <script src="components/noticeEdit.js"></script>
+    <script src="components/notices.js"></script>
+    <script src="components/comments.js"></script>
+    
+
+    <!--引入路由-->
+    <script src="router/router.js"></script>
+
+    <!--引入store共享状态-->
+    <script src="store/store.js"></script>
+    
+
+    <script>
+        //允许携带cookie 跨域访问关键
+        axios.defaults.withCredentials = true
+
+        // http response 响应拦截器
+        axios.interceptors.response.use(response => {
+            // 在接收响应做些什么，例如跳转到登录页
+            if (response.data.status == "logout") {
+                router.push({
+                    path: 'login'
+                })
+            }
+            return response;
+        }, error => {
+            // 对响应错误做点什么
+            return Promise.reject(error)
+        });
+        // 创建和挂载根实例。
+        // 记得要通过 router 配置参数注入路由，
+        // 从而让整个应用都有路由功能
+
+        const app = new Vue({
+            el: '#app',
+            router
+        })
+
+        Vue.use(VueHtml5Editor, {
+            showModuleName: false,//是否显示图标的含义
+            image: {
+                // 文件最大体积，单位字节  max file size
+                sizeLimit: 512 * 1024,
+                //图片压缩
+                compress: true,
+                width: 500,
+                height: 500,
+                quality: 80,
+
+                // 上传参数,默认把图片转为base64而不上传
+                // upload config,default null and convert image to base64
+
+                upload: {
+                    url: 'http://localhost:8080/blog/file',
+                    headers: {},
+                    params: {},
+                    fieldName: 'myfile'
+                },
+                // 响应数据处理,最终返回图片链接
+                // handle response data，return image url
+                uploadHandler(responseText) {
+                    // default accept json data like  {ok:false,msg:"unexpected"} or {ok:true,data:"image url"}
+                    //var json = JSON.parse(responseText)
+                    return 'http://localhost:8080/blog/' + responseText;
+                }
+            }
+        })
+    </script>
+    
+
+</body>
+
+</html>
